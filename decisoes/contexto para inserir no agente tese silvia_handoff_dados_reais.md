@@ -21,11 +21,20 @@
 ## Como usar este documento
 
 Quando os dados reais chegarem, entregue este arquivo ao agente junto com
-a base real e o comando:
+a base real e o comando — **se o agente já estiver rodando dentro da
+pasta do projeto**:
 
 > *"Leia este documento inteiro e execute o checklist da seção 3 com a
 > base real em `[CAMINHO_DA_BASE_REAL]`, respeitando as armadilhas da
 > seção 5."*
+
+**Se for um agente novo sem o repositório aberto**, use a versão completa:
+
+> *"Clone https://github.com/jonatapaulino/quali_silvia, leia
+> `decisoes/contexto para inserir no agente tese
+> silvia_handoff_dados_reais.md` inteiro e execute o checklist da seção 3
+> com a base real em `[CAMINHO_DA_BASE_REAL]`, respeitando as armadilhas
+> da seção 5."*
 
 O documento carrega todo o contexto necessário: o que o sistema é, o que
 foi medido no sintético, o que muda com dados reais, a ordem de execução,
