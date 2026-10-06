@@ -18,6 +18,19 @@
 > descreve o que existe, o que foi validado, o que muda quando os dados
 > reais chegarem e a ordem correta de execução. Leia inteiro antes de agir.
 
+## Como usar este documento
+
+Quando os dados reais chegarem, entregue este arquivo ao agente junto com
+a base real e o comando:
+
+> *"Leia este documento inteiro e execute o checklist da seção 3 com a
+> base real em `[CAMINHO_DA_BASE_REAL]`, respeitando as armadilhas da
+> seção 5."*
+
+O documento carrega todo o contexto necessário: o que o sistema é, o que
+foi medido no sintético, o que muda com dados reais, a ordem de execução,
+as pendências herdadas e o que não fazer.
+
 ## 0. O que é o sistema
 
 Arquitetura neurossimbólica (decisão **D9-b**) de apoio à qualificação de
