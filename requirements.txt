@@ -1,0 +1,23 @@
+# Fase 0-1 (núcleo do smoke test)
+pydantic>=2.5
+httpx>=0.27
+numpy>=1.26
+openpyxl>=3.1
+pytest>=8.0
+lightgbm>=4.0
+pandas>=2.2
+scikit-learn>=1.5
+fastapi>=0.110
+# uvicorn>=0.29                # servidor da api.py (opcional nos testes)
+
+# Fase 2 (recuperação)
+# faiss-cpu>=1.8
+# rank_bm25>=0.2
+# sentence-transformers>=3.0   # encoders D2: Legal-BERTimbau-STS / BGE-M3
+
+# Fase 3-4 (LLM + orquestração)
+# langgraph>=0.2
+# neo4j>=5.20                  # entra só se a ablação §4.2 justificar (D6)
+
+# Documentação (PDF de metodologia)
+fpdf2>=2.8

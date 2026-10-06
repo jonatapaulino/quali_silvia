@@ -1,0 +1,42 @@
+{
+  "metodo": "LogisticRegression(C=1) sobre BGE-M3, 5x StratifiedShuffleSplit 75/25",
+  "n_docs": 300,
+  "conceitos": {
+    "abuso_substancias": {
+      "auc_media": 1.0,
+      "auc_dp": 0.0,
+      "n_pos": 99
+    },
+    "ameaca_morte": {
+      "auc_media": 0.9772,
+      "auc_dp": 0.0216,
+      "n_pos": 71
+    },
+    "arma_fogo": {
+      "auc_media": 0.9988,
+      "auc_dp": 0.0015,
+      "n_pos": 41
+    },
+    "coercao": {
+      "auc_media": 0.9475,
+      "auc_dp": 0.0208,
+      "n_pos": 95
+    },
+    "descumprimento_medida": {
+      "auc_media": 0.9811,
+      "auc_dp": 0.0137,
+      "n_pos": 68
+    },
+    "escalada": {
+      "auc_media": 0.7815,
+      "auc_dp": 0.033,
+      "n_pos": 35
+    },
+    "separacao_recente": {
+      "auc_media": 0.9602,
+      "auc_dp": 0.0305,
+      "n_pos": 71
+    }
+  },
+  "nota": "rótulos fracos do gerador sintético — valida o MECANISMO do probe (D3), não a presença real do conceito em texto judicial"
+}

@@ -1,0 +1,27 @@
+{
+  "a_servico_parado": {
+    "motivo": "llm_indisponivel",
+    "ms": 912,
+    "degradado": true
+  },
+  "b_servico_travado": {
+    "motivo": "llm_indisponivel",
+    "ms": 315,
+    "degradado": true
+  },
+  "breaker_3_falhas": {
+    "motivos_sequencia": [
+      "llm_indisponivel",
+      "llm_indisponivel",
+      "llm_indisponivel",
+      "circuit_open"
+    ],
+    "abriu_no_4o": true
+  },
+  "c_pane_na_geracao": {
+    "motivo": "llm_timeout",
+    "ms": 1583,
+    "degradado": true
+  },
+  "nota": "Ollama nativo (sem contêiner): cenários adaptados de docker pause para porta morta/soquete travado/taskkill"
+}

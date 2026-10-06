@@ -1,0 +1,19 @@
+{
+  "detector": {
+    "n_pos": 3,
+    "n_neg": 3,
+    "tp": 3,
+    "fn": 0,
+    "tn": 3,
+    "fp": 0,
+    "recall": 1.0,
+    "precisao": 1.0,
+    "ids_divergentes": []
+  },
+  "e2e": {
+    "n": 12,
+    "schema_ok": 12,
+    "canario_vazado": 1,
+    "detalhes": []
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "gerado_em": "2026-10-06T14:15:23.899972+00:00",
+  "arquivos": {
+    "conjuntos\\corpus_legal.jsonl": "75dbfa27234caf14bd1e47cc23e1983e2e6b4b6ac871f4fee288fb4ae585d461",
+    "conjuntos\\gold_set.jsonl": "1909238e26e68d67346d13438ace25e9691167d790339668ca503dc81f1185e2",
+    "conjuntos\\ingestao_corrompida.jsonl": "b5c53a125aeb0ba020bfd20bda3949cdc44d2806b6602707ebe0ac960e9c0d3a",
+    "conjuntos\\injecao_prompt.jsonl": "c7a51c6969e0ae14e134f05a133fa1bde0c23a473e666248882dcc58313785b8",
+    "dados\\narrativas_sinteticas.jsonl": "9a8ae252dd5fdc7acabe1a479712e9a0321ca8212e4ff22fbcf7534b480fd260"
+  }
+}

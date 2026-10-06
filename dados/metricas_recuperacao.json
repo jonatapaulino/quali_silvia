@@ -1,0 +1,99 @@
+{
+  "k": 5,
+  "k_rrf": 60,
+  "n_docs": 22,
+  "dev": {
+    "bm25": {
+      "hit_rate": 0.72,
+      "ic95": [
+        0.6541,
+        0.7776
+      ],
+      "n": 200
+    },
+    "faiss_legal_bertimbau_base": {
+      "hit_rate": 0.38,
+      "ic95": [
+        0.3156,
+        0.4489
+      ],
+      "n": 200,
+      "meta": {
+        "dim": 768,
+        "device": "cpu",
+        "s_carga_indice": 34.57
+      }
+    },
+    "hibrido_legal_bertimbau_base": {
+      "hit_rate": 0.665,
+      "ic95": [
+        0.597,
+        0.7268
+      ],
+      "n": 200
+    },
+    "faiss_legal_bertimbau_sts": {
+      "hit_rate": 0.46,
+      "ic95": [
+        0.3923,
+        0.5292
+      ],
+      "n": 200,
+      "meta": {
+        "dim": 768,
+        "device": "cpu",
+        "s_carga_indice": 32.86
+      }
+    },
+    "hibrido_legal_bertimbau_sts": {
+      "hit_rate": 0.67,
+      "ic95": [
+        0.6022,
+        0.7314
+      ],
+      "n": 200
+    },
+    "faiss_bge_m3": {
+      "hit_rate": 0.81,
+      "ic95": [
+        0.75,
+        0.8583
+      ],
+      "n": 200,
+      "meta": {
+        "dim": 1024,
+        "device": "cpu",
+        "s_carga_indice": 78.74
+      }
+    },
+    "hibrido_bge_m3": {
+      "hit_rate": 0.76,
+      "ic95": [
+        0.6963,
+        0.8139
+      ],
+      "n": 200
+    }
+  },
+  "test": {
+    "bm25": {
+      "hit_rate": 0.71,
+      "ic95": [
+        0.6436,
+        0.7685
+      ],
+      "n": 200
+    },
+    "vencedor": {
+      "hit_rate": 0.815,
+      "ic95": [
+        0.7554,
+        0.8627
+      ],
+      "n": 200
+    }
+  },
+  "config_escolhida": "faiss_bge_m3",
+  "encoder_escolhido": "bge_m3",
+  "grafo": "fora do smoke: Neo4j exige índice próprio; entra só se "
+}

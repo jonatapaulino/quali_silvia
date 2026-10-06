@@ -1,0 +1,88 @@
+{
+  "auc": 0.7510313799417048,
+  "brier": 0.20106202031815607,
+  "ece": 0.011567292417041623,
+  "n_treino": 16207,
+  "n_teste": 3993,
+  "seed": 42,
+  "prevalencia_holdout": 0.5023791635361883,
+  "split": "grouped_by_id_agressor_sintetico (GroupShuffleSplit 80/20)",
+  "early_stopping": {
+    "best_iteration": 54,
+    "validacao_interna": "2452 episódios (grupos disjuntos do fit)"
+  },
+  "top_importancia": [
+    {
+      "feature": "n_episodios_anteriores",
+      "media": 0.047004657893455926,
+      "desvio": 0.005127637989743737
+    },
+    {
+      "feature": "ameaca_morte",
+      "media": 0.036649011194900404,
+      "desvio": 0.0037036613841668203
+    },
+    {
+      "feature": "descumpriu_medida",
+      "media": 0.017171510129902125,
+      "desvio": 0.0034662549186537765
+    },
+    {
+      "feature": "uso_alcool_drogas",
+      "media": 0.01508687325040472,
+      "desvio": 0.001575460358724299
+    },
+    {
+      "feature": "separacao_recente",
+      "media": 0.011239971579975683,
+      "desvio": 0.0013008888252366067
+    },
+    {
+      "feature": "acesso_arma",
+      "media": 0.011057228415407983,
+      "desvio": 0.0017737605589404153
+    },
+    {
+      "feature": "desemprego_agressor",
+      "media": 0.004189959060914872,
+      "desvio": 0.0019607969961023017
+    },
+    {
+      "feature": "controle_coercitivo",
+      "media": 0.0013693945842391253,
+      "desvio": 0.0014474858904457804
+    }
+  ],
+  "features_proibidas_no_modelo": [],
+  "nota": "Prevalência sintética ~50/50 difere da real: o escore não é interpretável como risco absoluto até recalibração (§4.5, D8).",
+  "controle_com_artefatos": {
+    "top_importancia": [
+      {
+        "feature": "score_geracao",
+        "media": 0.22904052061229482,
+        "desvio": 0.00930136994964427
+      },
+      {
+        "feature": "prob_geracao",
+        "media": 0.03567333981949452,
+        "desvio": 0.002088712499985792
+      },
+      {
+        "feature": "controle_coercitivo",
+        "media": 0.0005120898000511298,
+        "desvio": 0.00024386353775938027
+      },
+      {
+        "feature": "n_episodios_anteriores",
+        "media": 0.0004937377098697349,
+        "desvio": 0.0007825135928414033
+      },
+      {
+        "feature": "sexo_vitima_F",
+        "media": 0.00039382356202639636,
+        "desvio": 0.0006176628372718424
+      }
+    ],
+    "demonstra": "os artefatos dominam a importância quando incluídos"
+  }
+}
