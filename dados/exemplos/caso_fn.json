@@ -1,0 +1,31 @@
+{
+ "episodio": {
+  "id_episodio": "EP017662",
+  "id_agressor_sintetico": "b809b090",
+  "id_vitima_sintetica": "b2fbea6b",
+  "n_episodios_anteriores": 0.0,
+  "perfil_risco_agressor": "medio",
+  "idade_requerido": 47.0,
+  "idade_vitima": 35.0,
+  "escolaridade_requerido": "Não Informado",
+  "escolaridade_vitima": "Não Informado",
+  "sexo_requerido": "M",
+  "sexo_vitima": "F",
+  "local": "Manaus",
+  "classe": "Ação Penal - Procedimento Sumário",
+  "situacao_processo": "Suspenso",
+  "ameaca_morte": 0.0,
+  "acesso_arma": 0.0,
+  "uso_alcool_drogas": 0.0,
+  "separacao_recente": 0.0,
+  "descumpriu_medida": 0.0,
+  "filhos_comum": 1.0,
+  "desemprego_agressor": 0.0,
+  "controle_coercitivo": 1.0,
+  "nova_agressao": 1.0,
+  "prob_geracao": 7025.0,
+  "score_geracao": 8594.0
+ },
+ "score": 0.311288951649047,
+ "real": 1
+}

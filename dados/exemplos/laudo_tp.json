@@ -1,0 +1,50 @@
+{
+ "schema_version": "1.0",
+ "trace_id": "ex_EP013595",
+ "degraded": false,
+ "alegacao_nivel": "critico",
+ "alegacao_enunciado": "O agressor descumpriu medida protetiva de urgência, conforme Art. 24-A da Lei 11.340/2006, e ameaçou a vítima, conforme Art. 147 do Código Penal.",
+ "dados": {
+  "score_probabilidade": 90.0755467201489,
+  "metadados": {
+   "n_episodios_anteriores": 1.0,
+   "idade_requerido": 45.0,
+   "idade_vitima": 35.0,
+   "ameaca_morte": 1.0,
+   "acesso_arma": 1.0,
+   "uso_alcool_drogas": 1.0,
+   "separacao_recente": 1.0,
+   "descumpriu_medida": 1.0,
+   "filhos_comum": 1.0,
+   "desemprego_agressor": 0.0,
+   "controle_coercitivo": 1.0,
+   "classe": "Inquérito Policial",
+   "situacao_processo": "Suspenso",
+   "sexo_requerido": "M",
+   "sexo_vitima": "F"
+  }
+ },
+ "garantia_dispositivos": [
+  {
+   "doc_id": "lei11340_art24a",
+   "lei": "Lei 11.340/2006",
+   "artigo": "Art. 24-A"
+  },
+  {
+   "doc_id": "cp_art147",
+   "lei": "Código Penal",
+   "artigo": "Art. 147"
+  }
+ ],
+ "garantia_raciocinio": "O agressor descumpriu uma medida protetiva de urgência, conforme Art. 24-A da Lei 11.340/2006, que proíbe o contato com a vítima. Além disso, o agressor ameaçou a vítima, conforme Art. 147 do Código Penal, que criminaliza a ameaça de causar mal injusto e grave a alguém.",
+ "apoio": [],
+ "refutacao": "Nenhum atenuante ou falha identificado nos dados fornecidos.",
+ "refutacao_flags": [],
+ "qualificador": {
+  "incerteza": "alta",
+  "motivos": [
+   "cálculo padrão §5.2"
+  ]
+ },
+ "revisao_humana_obrigatoria": true
+}

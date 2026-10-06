@@ -1,0 +1,31 @@
+{
+ "episodio": {
+  "id_episodio": "EP013595",
+  "id_agressor_sintetico": "01ee4aa7",
+  "id_vitima_sintetica": "97db69db",
+  "n_episodios_anteriores": 1.0,
+  "perfil_risco_agressor": "alto",
+  "idade_requerido": 45.0,
+  "idade_vitima": 35.0,
+  "escolaridade_requerido": "Não Informado",
+  "escolaridade_vitima": "Não Informado",
+  "sexo_requerido": "M",
+  "sexo_vitima": "F",
+  "local": "Manaus",
+  "classe": "Inquérito Policial",
+  "situacao_processo": "Suspenso",
+  "ameaca_morte": 1.0,
+  "acesso_arma": 1.0,
+  "uso_alcool_drogas": 1.0,
+  "separacao_recente": 1.0,
+  "descumpriu_medida": 1.0,
+  "filhos_comum": 1.0,
+  "desemprego_agressor": 0.0,
+  "controle_coercitivo": 1.0,
+  "nova_agressao": 1.0,
+  "prob_geracao": 9934.0,
+  "score_geracao": "5.0132"
+ },
+ "score": 0.9007554672014891,
+ "real": 1
+}

@@ -1,0 +1,31 @@
+{
+ "episodio": {
+  "id_episodio": "EP013146",
+  "id_agressor_sintetico": "e9ec7c26",
+  "id_vitima_sintetica": "73210cfc",
+  "n_episodios_anteriores": 2.0,
+  "perfil_risco_agressor": "alto",
+  "idade_requerido": 20.0,
+  "idade_vitima": 19.0,
+  "escolaridade_requerido": "Não Informado",
+  "escolaridade_vitima": "Não Informado",
+  "sexo_requerido": "M",
+  "sexo_vitima": "F",
+  "local": "Manaus",
+  "classe": "Inquérito Policial",
+  "situacao_processo": "Suspenso",
+  "ameaca_morte": 0.0,
+  "acesso_arma": 0.0,
+  "uso_alcool_drogas": 1.0,
+  "separacao_recente": 1.0,
+  "descumpriu_medida": 1.0,
+  "filhos_comum": 1.0,
+  "desemprego_agressor": 0.0,
+  "controle_coercitivo": 1.0,
+  "nova_agressao": 0.0,
+  "prob_geracao": 6009.0,
+  "score_geracao": 409.0
+ },
+ "score": 0.841024695191758,
+ "real": 0
+}

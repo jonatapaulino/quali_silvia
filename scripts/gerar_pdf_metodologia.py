@@ -244,6 +244,26 @@ def main():
         "+0,035 AUC no ponto de parada; a prevalência artificial de ~50% torna "
         "os limiares D8 provisórios — recalibração e novo ponto de operação "
         "(recall alvo §8) são obrigatórios com dados reais.")
+    pdf.h2("3.3 O que a classificação acerta e erra — casos concretos")
+    pdf.fig("fig10_matriz_confusao.png", w=115,
+            caption="Figura 6b — Matriz de confusão real no holdout (limiar 0,50): "
+                    "acurácia 69,0%, recall 64,5%, precisão 71,2%.")
+    pdf.table(
+        ["Caso", "Score", "Banda D8", "Padrão de features", "Desfecho"],
+        [
+            ["TP EP013595", "0,901", "crítico", "ameaça+arma+separação+descumprimento+coerção", "correto"],
+            ["FP EP013146", "0,841", "crítico", "separação+descumprimento+coerção (sem ameaça/arma)", "falso positivo"],
+            ["FN EP017662", "0,311", "moderado", "só coerção+filhos (padrão oculto ao tabular)", "falso negativo"],
+            ["TN EP002641", "0,219", "baixo", "nenhum fator de risco", "correto"],
+        ], widths=[30, 18, 22, 88, 32])
+    pdf.p(
+        "Os erros são interpretáveis: o FP acumula fatores graves sem os dois "
+        "mais fortes (ameaça de morte e arma) — a banda CRÍTICO dispara revisão "
+        "humana, que é o comportamento seguro para o erro. O FN mostra o limite "
+        "do tabular: controle coercitivo isolado tem peso insuficiente — risco "
+        "residual que justifica o recall-alvo §8 e a revisão obrigatória em "
+        "MODERADO divergente (override §5.3). Detalhes completos em "
+        "decisoes/exemplos_classificacao.md e dados/exemplos/.")
 
     # ---- 4. recuperação --------------------------------------------------
     pdf.h1("4. Ramo de recuperação — §4.2")
@@ -327,6 +347,31 @@ def main():
         "latência absorve a 2ª geração — p99 subiu para %.1f s, acima do SLA; o "
         "p95 permanece dentro. Mitigações possíveis: retry assíncrono via "
         "webhook (D5) ou teto de tokens na 2ª geração." % (e["total"]["p99"] / 1000))
+    pdf.h2("5.2 Exemplo ponta a ponta (executado, não ilustrado)")
+    pdf.p(
+        "Caso EP013595 (verdadeiro positivo): 1 episódio anterior, ameaça de "
+        "morte, arma de fogo, separação recente, descumprimento de medida "
+        "protetiva, filhos comuns e controle coercitivo.")
+    pdf.bullet(
+        "LightGBM: score 0,901 → banda CRÍTICO (decisão determinística) → "
+        "revisão humana obrigatória.")
+    pdf.bullet(
+        "Retrieval (BGE-M3/FAISS): art. 24-A da Lei 11.340/2006, art. 147 do CP "
+        "e casos de apoio similares.")
+    pdf.bullet(
+        "Mistral-7B (1 tentativa): alegação — descumprimento de medida "
+        "protetiva (art. 24-A) somado a ameaça (art. 147); garantia cita os "
+        "dois dispositivos recuperados; refutação — sem atenuantes nos dados.")
+    pdf.bullet(
+        "Verificação determinística: 100% das citações íntegras; incerteza "
+        "ALTA registrada pelo qualificador (cálculo padrão §5.2).")
+    pdf.p(
+        "Caso EP017662 (falso negativo, incluído de propósito): controle "
+        "coercitivo isolado → score 0,319 → banda MODERADO. O laudo ainda é "
+        "gerado e fundamentado (art. 12, art. 147), mas a refutação e a "
+        "incerteza ALTA sinalizam a fragilidade — demonstrando que a "
+        "arquitetura reporta o erro em vez de escondê-lo. Texto integral dos "
+        "dois laudos: decisoes/exemplos_classificacao.md.")
 
     # ---- 6. guardiões -----------------------------------------------------
     pdf.h1("6. Guardiões e resiliência — §4.6, §4.7")

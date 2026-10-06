@@ -1,0 +1,31 @@
+{
+ "episodio": {
+  "id_episodio": "EP002641",
+  "id_agressor_sintetico": "f5e37d2f",
+  "id_vitima_sintetica": "c2a05da3",
+  "n_episodios_anteriores": 0.0,
+  "perfil_risco_agressor": "baixo",
+  "idade_requerido": 34.0,
+  "idade_vitima": 64.0,
+  "escolaridade_requerido": "Não Informado",
+  "escolaridade_vitima": "Não Informado",
+  "sexo_requerido": "M",
+  "sexo_vitima": "F",
+  "local": "Manaus",
+  "classe": "Auto de Prisão em Flagrante",
+  "situacao_processo": "Suspenso",
+  "ameaca_morte": 0.0,
+  "acesso_arma": 0.0,
+  "uso_alcool_drogas": 0.0,
+  "separacao_recente": 0.0,
+  "descumpriu_medida": 0.0,
+  "filhos_comum": 0.0,
+  "desemprego_agressor": 0.0,
+  "controle_coercitivo": 0.0,
+  "nova_agressao": 0.0,
+  "prob_geracao": 1801.0,
+  "score_geracao": -15159.0
+ },
+ "score": 0.2192760580083428,
+ "real": 0
+}

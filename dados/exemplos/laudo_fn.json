@@ -1,0 +1,50 @@
+{
+ "schema_version": "1.0",
+ "trace_id": "ex_EP017662",
+ "degraded": false,
+ "alegacao_nivel": "moderado",
+ "alegacao_enunciado": "A acusação é de violência doméstica contra a mulher, conforme a Lei 11.340/2006, Art. 12, e lesão corporal doméstica contra a mulher, conforme o Código Penal, Art. 129, § 9º.",
+ "dados": {
+  "score_probabilidade": 31.88113631874844,
+  "metadados": {
+   "n_episodios_anteriores": 0.0,
+   "idade_requerido": 47.0,
+   "idade_vitima": 35.0,
+   "ameaca_morte": 0.0,
+   "acesso_arma": 0.0,
+   "uso_alcool_drogas": 0.0,
+   "separacao_recente": 0.0,
+   "descumpriu_medida": 0.0,
+   "filhos_comum": 1.0,
+   "desemprego_agressor": 0.0,
+   "controle_coercitivo": 1.0,
+   "classe": "Ação Penal - Procedimento Sumário",
+   "situacao_processo": "Suspenso",
+   "sexo_requerido": "M",
+   "sexo_vitima": "F"
+  }
+ },
+ "garantia_dispositivos": [
+  {
+   "doc_id": "lei11340_art12",
+   "lei": "Lei 11.340/2006",
+   "artigo": "Art. 12"
+  },
+  {
+   "doc_id": "cp_art129_9",
+   "lei": "Código Penal",
+   "artigo": "Art. 129, § 9º"
+  }
+ ],
+ "garantia_raciocinio": "A acusação é baseada no registro da ocorrência e na declaração da vítima, conforme o procedimento em inquérito policial, como previsto na Lei 11.340/2006, Art. 12. A lesão corporal doméstica contra a mulher é considerada crime, conforme o Código Penal, Art. 129, § 9º, quando resulta em incapacidade para as ocupações habituais, perigo de vida, debilidade permanente de membro, sentido ou função, aceleração de parto, incapacidade permanente para o trabalho, enfermidade incuravel, perda ou inutilização do membro, sentido ou função, deformidade permanente ou aborto. Neste caso, a vítima relata cont",
+ "apoio": [],
+ "refutacao": "Nenhum atenuante ou falha identificado nos dados fornecidos.",
+ "refutacao_flags": [],
+ "qualificador": {
+  "incerteza": "alta",
+  "motivos": [
+   "cálculo padrão §5.2"
+  ]
+ },
+ "revisao_humana_obrigatoria": false
+}
