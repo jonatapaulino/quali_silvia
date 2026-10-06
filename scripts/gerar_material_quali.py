@@ -110,6 +110,57 @@ def fig6(y_te, p_te):
     plt.close(fig)
 
 
+def fig11(y_te, p_te):
+    """Escolha do erro: recall, precisão e % de revisão por limiar de decisão.
+    Marca 0,50 (padrão) e o ponto de operação §8 (recall≥0,95)."""
+    y = np.asarray(y_te)
+    ths = np.linspace(0.01, 0.99, 99)
+    rec, prec, rev = [], [], []
+    for th in ths:
+        pred = p_te >= th
+        tp = int((pred & (y == 1)).sum())
+        fn = int((~pred & (y == 1)).sum())
+        fp = int((pred & (y == 0)).sum())
+        rec.append(tp / max(tp + fn, 1))
+        prec.append(tp / max(tp + fp, 1))
+        rev.append(pred.mean())
+    th95 = float(np.quantile(p_te[y == 1], 0.05))
+
+    def _counts(th):
+        pred = p_te >= th
+        return (int((pred & (y == 1)).sum()), int((pred & (y == 0)).sum()),
+                int((~pred & (y == 0)).sum()), int((~pred & (y == 1)).sum()),
+                float(pred.mean()))
+
+    tp95, fp95, tn95, fn95, rev95 = _counts(th95)
+    rec95 = tp95 / (tp95 + fn95)
+    tp50, fp50, tn50, fn50, _ = _counts(0.5)
+    rec50 = tp50 / (tp50 + fn50)
+    i50 = int(np.argmin(np.abs(ths - 0.5)))
+
+    fig, ax = plt.subplots(figsize=(7.6, 4.4))
+    ax.plot(ths, rec, color=VERM, lw=2, label="recall (cobertura de riscos reais)")
+    ax.plot(ths, prec, color=AZUL, lw=2, label="precisão")
+    ax.plot(ths, rev, color="#888", lw=1.4, ls=":", label="% enviado à revisão")
+    ax.axvline(0.5, color="#555", ls="--", lw=1)
+    ax.axvline(th95, color=VERDE, ls="--", lw=1.4)
+    ax.annotate(f"limiar 0,50\nrecall {rec50:.0%} · FN {fn50}",
+                (0.5, rec50), xytext=(0.60, rec50 - 0.22),
+                fontsize=8, color="#555",
+                arrowprops=dict(arrowstyle="-", color="#555", lw=0.8))
+    ax.annotate(f"ponto §8: limiar {th95:.2f}\nrecall {rec95:.0%} · FN {fn95} · revisão {rev95:.0%}",
+                (th95, rec95), xytext=(th95 + 0.05, 0.32),
+                fontsize=8, color=VERDE, fontweight="bold",
+                arrowprops=dict(arrowstyle="-", color=VERDE, lw=0.8))
+    ax.set(xlabel="limiar de decisão (score mínimo para sinalizar risco)",
+           ylabel="métrica", ylim=(0, 1.05), xlim=(0, 1),
+           title="Escolhendo como errar — FN caro (risco perdido) vs. FP barato (revisão humana)")
+    ax.legend(loc="lower left", fontsize=8)
+    fig.tight_layout()
+    fig.savefig(FIGS / "fig11_ponto_operacao.png", bbox_inches="tight")
+    plt.close(fig)
+
+
 def fig7():
     lat = json.loads((RAIZ / "dados" / "metricas_latencia.json").read_text(encoding="utf-8"))["estagios_ms"]
     caixas = [
@@ -300,5 +351,5 @@ if __name__ == "__main__":
     eps, te, y_te, p_te = carregar_holdout()
     m = json.loads((RAIZ / "dados" / "metricas_tabular.json").read_text(encoding="utf-8"))
     fig5(y_te, p_te, m["ece"]); fig6(y_te, p_te); fig7(); dicionario(eps)
-    fig8(eps, te); fig9(eps)
-    print("gerados: fig5-fig9 + dicionario_base.md")
+    fig8(eps, te); fig9(eps); fig11(y_te, p_te)
+    print("gerados: fig5-fig9, fig11 + dicionario_base.md")

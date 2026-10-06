@@ -264,6 +264,18 @@ def main():
         "residual que justifica o recall-alvo §8 e a revisão obrigatória em "
         "MODERADO divergente (override §5.3). Detalhes completos em "
         "decisoes/exemplos_classificacao.md e dados/exemplos/.")
+    pdf.fig("fig11_ponto_operacao.png", w=160,
+            caption="Figura 6c — Escolha do erro: recall, precisão e fração enviada à "
+                    "revisão em função do limiar de decisão.")
+    pdf.p(
+        "Escolher o limiar é escolher QUAL erro o sistema comete, não SE ele "
+        "erra — com AUC finito, erro zero não existe. No padrão 0,50: recall "
+        "64,7% (709 falsos negativos, o erro caro). No ponto de operação §8 "
+        "(limiar 0,25): recall 95,1% e FN 99 — à custa de 89,5% dos casos "
+        "enviados à revisão humana. É uma decisão institucional explícita: "
+        "aceita-se o erro barato (revisão extra) para quase eliminar o erro "
+        "caro (risco não sinalizado). O modelo fornece o ranking; a política "
+        "de decisão escolhe o ponto — e fica registrada, auditável.")
 
     # ---- 4. recuperação --------------------------------------------------
     pdf.h1("4. Ramo de recuperação — §4.2")

@@ -43,9 +43,11 @@ Os dois erros são interpretáveis (seção 3.3 do PDF): o FP acumulou fatores
 graves sem os dois mais fortes e a banda CRÍTICO disparou revisão humana —
 comportamento seguro para falso positivo. O FN (controle coercitivo isolado)
 mostra o limite do tabular e justifica o override de MODERADO divergente e o
-recall-alvo §8. Em produção, o limiar não seria 0,50: seria o ponto que
-garante recall ≥0,95 — nesse regime o FN some à custa de mais revisão humana
-(custo assumido no §8).
+recall-alvo §8. Em produção, o limiar não seria 0,50: o ponto de operação que
+garante recall ≥0,95 no holdout é ~0,25 — lá o FN cai de 709 para 99 e
+~90% dos casos vão à revisão humana (fig11). O FN do exemplo (score 0,319)
+ficaria acima de 0,25 → seria capturado. A escolha do erro é institucional,
+não acidental: o modelo ranqueia, a política decide, e fica auditável.
 
 ## Recuperação
 
