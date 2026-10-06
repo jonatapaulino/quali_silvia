@@ -1,5 +1,19 @@
 # Handoff — transição para dados reais (Arquitetura Tese)
 
+• **O que o sistema é** — 3 ramos, quem decide (LightGBM), quem só escreve (Mistral), quem vigia (guardiões)
+
+• **O que foi medido no sintético** — incluindo o déficit real de 3,5 p.p. no §4.2 que justifica o fine-tuning
+
+• **O que não muda** — contratos, guardiões, harness: troca de dados é re-treino, não re-projeto
+
+• **Checklist de 6 passos** — de governança/LGPD (passo 0!) até revalidação completa, na ordem certa
+
+• **As 4 pendências herdadas** — kappa do especialista, docker pause, injeção adversarial externa, fine-tuning adiado de propósito
+
+• **6 armadilhas explícitas** — não transportar limiar 0,25 do sintético, não versionar dados reais no Git público, não treinar antes do gold validado, etc.
+
+• **Comandos de referência** — como re-rodar cada fase
+
 > **Para o agente/executor futuro**: este documento é autossuficiente. Ele
 > descreve o que existe, o que foi validado, o que muda quando os dados
 > reais chegarem e a ordem correta de execução. Leia inteiro antes de agir.
