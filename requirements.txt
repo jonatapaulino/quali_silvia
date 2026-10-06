@@ -21,3 +21,4 @@ fastapi>=0.110
 
 # Documentação (PDF de metodologia)
 fpdf2>=2.8
+python-docx>=1.1

@@ -1,0 +1,46 @@
+MATERIAL DE QUALIFICAÇÃO — ARQUITETURA TESE
+==========================================
+
+Sistema neurossimbólico de apoio à qualificação de risco de reiteração de
+violência contra a mulher — smoke test sobre base sintética (20.200 episódios).
+
+DOCUMENTOS PRINCIPAIS (em ordem de leitura sugerida)
+---------------------------------------------------
+
+metodologia_smoke_test.pdf
+    Documento central (15 pág.): escopo, arquitetura, protocolos de
+    avaliação, resultados por fase com figuras, tabela dos 9 critérios do
+    DDA v5.3 §4 e limitações declaradas. É o "texto da metodologia".
+
+decisoes_v53.docx
+    Ata técnica das decisões D1–D9 tomadas em sessão (o que foi aceito,
+    adaptado ou descartado do DDA) + ambiente de execução.
+
+relatorio_smoke.docx
+    Relatório de verificação: protocolo de execução, métricas e evidências
+    por fase, tabela de vereditos, rastreabilidade (hashes) e limitações.
+
+exemplos_classificacao.docx
+    Evidência concreta: matriz de confusão no holdout, quatro casos
+    exemplificados (VP/FP/FN/VN) com features e interpretação, e dois
+    laudos completos executados ponta a ponta (tabular + recuperação +
+    Mistral + verificação de citações).
+
+perguntas_banca.docx
+    Roteiro de perguntas prováveis com respostas ancoradas nos artefatos —
+    material de preparação para a arguição.
+
+dicionario_base.docx
+    Dicionário de dados: as 26 colunas da base sintética (papel, tipo,
+    correlação com o alvo) + amostra de 5 linhas + narrativa renderizada.
+
+figuras/
+    As 11 figuras em PNG (fig1–fig11): arquitetura, ROC/importância,
+    ablação de recuperação, latência, guardiões/CAV, calibração, bandas
+    D8, convergência do treino, curva de aprendizado, matriz de confusão,
+    ponto de operação (escolha do erro).
+
+REPOSITÓRIO
+-----------
+https://github.com/jonatapaulino/quali_silvia
+(código-fonte, dados sintéticos, testes e scripts de reprodução)
