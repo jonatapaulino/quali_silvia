@@ -13,18 +13,18 @@ Treina sobre base_sintetica_risco.xlsx (target nova_agressao) com:
 
 import json
 import logging
-import os
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
+from . import config
+
 log = logging.getLogger("arquitetura_tese.tabular")
 
-RAIZ = Path(__file__).resolve().parents[1]
-BASE_XLSX = RAIZ / "dados" / "base_sintetica_risco.xlsx"
-MODELO_PATH = Path(os.environ.get("ARQUITETURA_TESE_MODELO", RAIZ / "dados" / "modelo_tabular.txt"))
-META_PATH = MODELO_PATH.with_suffix(".meta.json")
+BASE_XLSX = config.BASE_XLSX
+MODELO_PATH = config.MODELO_PATH
+META_PATH = config.META_PATH
 
 TARGET = "nova_agressao"
 GRUPO = "id_agressor_sintetico"

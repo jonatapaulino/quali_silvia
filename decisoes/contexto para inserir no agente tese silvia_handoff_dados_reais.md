@@ -51,12 +51,17 @@ separadas:
 | Ramo | Componente | Papel |
 |---|---|---|
 | Tabular | LightGBM (`arquitetura_tese/tabular.py`) | Score 0–1 + banda D8 — **determinístico, é quem decide o risco** |
-| Recuperação | BGE-M3 denso (`recuperacao.py`, `evidencias.py`) | Traz dispositivos legais/narrativas para fundamentação |
-| Geração | Mistral-7B via Ollama (`llm.py`, `prompts.py`) | **Só escreve texto** (laudo Toulmin §5.7) — nunca decide |
+| Recuperação | BGE-M3 denso (`recuperacao/` + `servicos/evidencias.py`) | Traz dispositivos legais/narrativas para fundamentação |
+| Geração | Mistral-7B via Ollama (`llm/` pacote) | **Só escreve texto** (laudo Toulmin §5.7) — nunca decide |
 
 Guardiões determinísticos envolvem o LLM: verificação de citações
-(`verificar_fundamentacao`), detector de injeção (`guardiao.py`),
-circuit breaker + `LaudoDegradado` (`resiliencia.py`), probes CAV.
+(`schemas.checar_fundamentacao`), detector de injeção
+(`servicos/guardiao.py`), circuit breaker + `LaudoDegradado`
+(`servicos/resiliencia.py`), orquestração (`servicos/pipeline.py`),
+probes CAV. Layout em camadas: domínio (raiz) → dados/ → infra
+(recuperacao/, llm/) → servicos/ → api.py; paths centralizados em
+`config.py` — trocar a base real significa tocar dados/ e config, não o
+resto.
 
 Repositório: `https://github.com/jonatapaulino/quali_silvia` — pasta local
 `D:/experimento_silvia/judicata`. 65 testes (`pytest -q`).

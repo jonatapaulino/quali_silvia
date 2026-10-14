@@ -16,7 +16,7 @@ Cada documento emitido traz:
 import random
 from pathlib import Path
 
-BASE_XLSX = Path(__file__).resolve().parents[2] / "dados" / "base_sintetica_risco.xlsx"
+from ..config import BASE_XLSX
 
 ABERTURA_GENERICA = [
     "BOLETIM DE OCORRÊNCIA — Comparece à delegacia a vítima {vitima}, {idade_v} anos, "
