@@ -79,21 +79,8 @@ python scripts/gerar_pdf_metodologia.py    # PDF de metodologia
 ## Layout
 
 ```
-arquitetura_tese/
-  config.py         paths, env vars e endpoints — fonte única
-  schemas.py        contratos pydantic (domínio)
-  regras.py         banda D8, incerteza, override CAV (domínio)
-  tabular.py        motor preditivo LightGBM (treino + predição)
-  harness.py        utilidades de métrica (IC95 bootstrap etc.)
-  api.py            entrypoint FastAPI
-  dados/            fontes de dados (narrativas, corpus seed)
-  recuperacao/      infra de retrieval: texto, fontes, indices
-                    (BM25/FAISS), fusao RRF, encoders
-  llm/              infra do LLM: prompts §5.7, contexto, cliente Ollama
-  servicos/         aplicação: guardiao, evidencias, resiliencia
-                    (breaker/degradado), pipeline (orquestração do laudo)
-  (módulos-raiz evidencias/guardiao/prompts/fusao/corpus/resiliencia
-   são shims de compatibilidade que re-exportam a nova localização)
+arquitetura_tese/   pacote (tabular, recuperacao, evidencias, llm, prompts,
+                    schemas, regras, fusao, guardiao, resiliencia, api)
 scripts/            pipeline de treino, avaliação, caos e figuras
 tests/              65 testes pytest (override, injeção, schema, retry)
 conjuntos/          corpus legal + gold set + seeds §6.2/§6.3
